@@ -98,7 +98,7 @@ Bu kodun çıktısı yine tek satır olacaktır.
  var isActive: Bool = true
  ```
 
- Ayrıca değişkene bir değer atamadan da tanımlama yapılabilir. Değişkenir türünü belirtip değeri sonra vermek istediğimiz durumlarda bu yöntemi kullanırız.
+ Ayrıca değişkene bir değer atamadan da tanımlama yapılabilir. Değişkenin türünü belirtip değeri sonra vermek istediğimiz durumlarda bu yöntemi kullanırız.
 
  ```swift
  var age: Int
