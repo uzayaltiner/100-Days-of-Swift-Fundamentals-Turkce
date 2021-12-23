@@ -1,4 +1,5 @@
 # Day 2
+"İşler zorlaştığında herkes gider." Lynch’s Law
 ### 1. Arrays
 Diziler tek bir değer gibi depolanan değerler topluğudur. Ve köşeli parantez içine tanımlanır. "[ ]"
 ```swift
