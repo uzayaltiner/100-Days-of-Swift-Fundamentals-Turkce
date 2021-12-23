@@ -16,17 +16,20 @@ let ornek = ""
 ```
 Üstteki kod bloğu şeklinde tanımlanırlar. Sabittir. Bir kere değer atandıktan sonra değiştirilemez.
 ### 2. String, Integer, Double, Boolean yapıları
-**String**
+**String** 
+
  String yapısı yazı şeklinde tanımlanır.
  ```swift
  let name = "Uzay"
  ````
 **Integer**
+
 Integer yapısı tamsayı şeklinde tanımlanır. 
 ```swift
 let age = 27
 ```
 **Double**
+
 Double yapısı kesirli sayılar şeklinde tanımlanır.
 ```swift
 let height = 1.78
