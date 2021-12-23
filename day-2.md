@@ -145,3 +145,26 @@ ages["Mehmet", default: "Bilinmiyor"]
  var capitals = Dictionary<String, String>()
  ``` 
  
+ ### 7. Enumerations
+  Genellikle enum olarak kullanılırlar. Birbiriyle ilgili değer gruplarını kullanımını kolaylaştıracak şekilde gruplamaktır.
+  Örneğin bir sonuç çıktısı için tanımladığımız değişkeni unutup farklı bir değişken tanımlayabiliriz.
+  ```swift
+  let sonuc = "Hata"
+  let sonuc2 = "Fail" 
+  let sonuc3 = "Failure"
+  ``` 
+  Yukarıda da göründüğü gibi sonuç sabiti için birden çok hata belirten konum tanımladık. Enum'u kullanarak bunu engelleyebiliriz. Örneğin;
+  ```swift
+  enum result {
+      case success
+      case failure
+  }
+```
+```swift
+let sonuc4 = result.success
+let sonuc5 = result.failure
+```
+
+Bu her seferinde yanlışlıkla farklı string tanımlamamızı engeller.
+
+### 8. Enum Associated Values
