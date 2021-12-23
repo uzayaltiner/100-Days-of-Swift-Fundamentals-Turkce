@@ -130,7 +130,7 @@ ages["Mehmet", default: "Bilinmiyor"]
  ```swift
  var notes["Uzay"] = 80
  ```
- 2. Boş bir array oluşturmak için aşağıdaki değişkenimizi aşağıdaki gibi tanımlarız:
+ 2. Boş bir array oluşturmak için değişkenimizi aşağıdaki gibi tanımlarız:
  ```swift
  var notes = [Int]()
  ```
@@ -168,3 +168,43 @@ let sonuc5 = result.failure
 Bu her seferinde yanlışlıkla farklı string tanımlamamızı engeller.
 
 ### 8. Enum Associated Values
+Enum kullanırken her bir case için yanında tutabileceği ek değerler verebiliriz. Örneğin;
+```swift
+enum notes = {
+    case matematik(note: Int)
+    case türkçe(note: Int)
+    case tarih(note: Int)
+}
+```
+Şimdi matematik caseimize notumuzu ekleyelim.
+
+```swift
+let matematik = notes.matematik(note: 80)
+```
+
+### 9. Enum Raw Values
+Bazen enumların içindeki değerlerin bir anlam ifade etmesi için enumlara değer atamamız gerekir. Bunu örnek üstünden daha iyi anlayacağız.
+```swift
+enum gezegenler: Int{
+    case merkür = 1
+    case venüz
+    case dünya
+    case mars
+}
+```
+Yukarıda integer ile ilişkilendirmiş bir enumumuz var. Merkür değerine 1 değerini tanımlarsak swift bizim için otomatik olarak diğer değerleri sıralayacaktır. 
+
+Bir diğer örnekte ise string değeri atayalım.
+```swift
+enum yonler: String {
+    case kuzey = "K"
+    case guney = "G"
+    case dogu = "D"
+    case batı = "B"
+}
+```
+burada ise;
+```swift
+yonler.kuzey.rawValue
+```
+bu kodun çıktısı "K" olacaktır.
