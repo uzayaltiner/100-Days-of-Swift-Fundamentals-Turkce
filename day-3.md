@@ -54,3 +54,19 @@ let kalan = first % second // 1
  let score = 80
 
  let scoreList = name + score
+ ```
+ ### 3. Compound Assignment Operators
+ Swift bir değişkenin değerini değiştirmemize yarayan operatöre sahiptir. Bu bildiğimiz +, -, *, / fakat sonuna bir = atayarak işlemimizi değişkenimize atıyoruz. Örneğin;
+ ```swift
+ var sonuc = 95
+ sonuc += 5
+ // kodumuzun çıktısı 100 olacaktır.
+ ```
+ Bu operatörü string değerleri için de kullanabiliriz. Örneğin;
+ ```swift
+ var name = "Uzay"
+ name += "Altıner"
+ // kodumuzun çıktısı UzayAltıner olacaktır. String arasında boşluğu değişkenin içinde tanımlamalıyız. 
+ var name = "Uzay " // gibi
+ ```
+ Fakat farklı değer tiplerini kullanamayız. Ayrıca bu operatörü kullanırken değerimizi "var" değişkeniyle tanımlamalıyız. Çünkü "let" sabiti değiştirilemez. 
