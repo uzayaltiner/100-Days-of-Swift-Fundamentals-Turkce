@@ -7,7 +7,7 @@ Operatörler + ve - gibi matematiksel sembollerdir ve swiftte çok geniş bir ku
 let firstScore = 12
 let secondScore = 4
 ``` 
-Yukarıda tanımladığımız 2 tane sabitimiz olsun ve bular üzerinden çalışalım.
+Yukarıda tanımladığımız 2 tane sabitimiz olsun ve bular üzerinde çalışalım.
 
 ```swift
 let toplam = firstScore + secondScore // 16
@@ -95,7 +95,7 @@ a > b
 Bu operatörlerin hepsi string yapılarla da çalışır.
 
 ### 5. Conditions
-Şimdi if koşulunu kurarken kullanabileceğimiz birçok operatör biliyoruz. İf koşulu, koşulumuzu belirtikten sonra "{}" süslü parantez içerisine çalışacak komutu girerek oluşturulur. Else ile bu koşul dışı durumlarda çalışacak kod yazılır. If else ile farklı koşullar oluşturulur. Örneğin;
+Şimdi if koşulunu kurarken kullanabileceğimiz birçok operatör biliyoruz. If koşulu, koşulumuzu belirtikten sonra "{}" süslü parantez içerisine çalışacak komutu girerek oluşturulur. Else ile bu koşul dışı durumlarda çalışacak kod yazılır. If else ile farklı koşullar oluşturulur. Örneğin;
 ```swift
 let firstCard = 11
 let secondCard = 10
@@ -113,7 +113,7 @@ Swift, birden çok koşulu birlikte kullanabildiğimiz 2 adet özel operatöre s
 
 1. || "ya da" Operatörü
 
-Or operatörü 2 koşuldan birinin doğru olduğu koşulda çalışacaktır.
+Ya da (or) operatörü 2 koşuldan birinin doğru olduğu koşulda çalışacaktır.
 
 ```swift
 let age1 = 12
@@ -124,7 +124,8 @@ if age1 > 18 || age2 > 18 {
 }
 ```
 2. && "ve" Operatörü
-Ve operatörü koşulların 2'sinin de doğru olduğu koşulda çalışacaktır. Örneğin;
+
+Ve (and) operatörü koşulların 2'sinin de doğru olduğu koşulda çalışacaktır. Örneğin;
 
 ```swift
 let age1 = 20
@@ -151,7 +152,7 @@ if firstCard == secondCard {
 }
 ```
 ### 8. Switch Statements
-Birçok if ve if else koşulu kullamacağımız bir yapımız varsa switch ve case yapısını kullanmamız gerekir. Daha açık bir kullanımdır. Olabilecek bütün değerleri tanımlayarak kullanırız. Örneğin;
+Birçok if ve if else koşulu kullanacağımız bir yapımız varsa switch ve case yapısını kullanmamız gerekir. Daha açık bir kullanımdır. Olabilecek bütün değerleri tanımlayarak kullanırız. Örneğin;
 ```swift
 switch hava {
     case "yağmurlu":
@@ -164,7 +165,7 @@ switch hava {
         print("İyi günler.")        
 }
 ```
-Yukarıda gördüğümüz örnekte hava durumlarına göre çıktılarımızı belirledik. Son satırdaki default komuyunda ise sahip olmadığımız bir girdiye verilecek standart cevabı tanımladık. Default komutu kullanımı zorunludur.
+Yukarıda gördüğümüz örnekte hava durumlarına göre çıktılarımızı belirledik. Son satırdaki default komutunda ise sahip olmadığımız bir girdiye verilecek standart cevabı tanımladık. Default komutu kullanımı zorunludur.
 
 Ayrıca kodunuzun bir sonraki case'e devam etmesini istiyorsanız "fallthrough" komutunu kullanın.
 ```swift
@@ -188,3 +189,24 @@ iyi günler.
 olacaktır.
 
 ### 9. Range Operators
+Swift bize aralık oluşturmak için iki çeşit imkanı sağlıyor. Bunlar;
+
+1. ..<  Örneğin 1..<5 komutunun aralığı ; 1, 2, 3, 4 
+2. ...  Örneğin 1...5 komutunun çıktısı ; 1, 2, 3, 4, 5
+
+Aralıklar Switch yapıları için çok kullanışlıdır. Çünkü bunları her bir case için kullanabiliriz. Örneğin bir sınav notuna bağlı olarak farklı mesajlar yazdırabiliriz.
+
+```swift
+let not = 85
+switch not {
+    case 0..<50: 
+        print("Başarısız!")
+    case 50..<85: 
+        print("Geçer")
+    default:
+        print("Tebrikler")     
+}
+```
+Yukarıdaki kodun çıktısı Tebrikler olacaktır. 
+
+Not: Tüm olası değerlerin kapsandığından emin olmak için default case olmalıdır. Case atanmamış bir değer girildiğinde default case'i dönecektir.
