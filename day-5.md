@@ -110,3 +110,26 @@ func chechPassword (_ password: String) throw -> Bool {
 ```
 
 ### 9. Running Throwing Functions
+Swift program çalışırken hataların olmasını istemez. Error-throwing fonksiyonu çalıştırmanıza izin vermez. Bunun yerine 3 yeni keyword kullanarak bir fonksiyon yazmalıyız.
+```swift
+do {
+    try checkPassword("password")
+    print("Şifre kullanılabilir.")
+} catch {
+    print("Şifre kullanılamaz!")
+}
+```
+Bu fonksiyonda "Şifre kullanılamaz!" yazdırılır fakat "Şifre kullanılabilir." asla yazdırılmaz.
+
+### 10. Inout Parameters
+Swift fonksiyonunda kullanılan bütün parametreler sabittir, değiştirilemez. Fakat inout komutuyla istediğimiz kadar parametreyi fonksiyonun içinde değiştirebiliriz. Ve bu değişim fonkisoynun dışına da etki eder. Örneğin bir değeri ikiye katlamak istiyorsak ve bu değeri yeniden tanımlamak istemiyorsak şöyle bir fonksiyon tanımlayabiliriz.
+```swift
+func double(number: inout Int) {
+    number *= 2
+}
+```
+Bunu yapmanız için değişken bir integer tanımlamanız gerekir. Sabit ile kullanılamaz. Ayrıca bir fonksiyonun içinde bir değer çağırırken "&" ve işareti kullanmanız gereir.
+```swift
+var myNum = 10
+double(number: &myNum)
+```
