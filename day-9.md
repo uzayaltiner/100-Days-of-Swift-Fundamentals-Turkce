@@ -60,3 +60,39 @@ Yukarıdaki structta lazy var komutuyla Swift; FamilyTree struct'ını ilk çal�
 ed.familyTree
 ```
 
+### 4. Static Properties and Methods
+Static anahtar kelimesiyle her seferinde yeni bir property eklediğimizde değişecek bir property oluşturabiliriz. Bir sınıf struct'ı oluşturalım ve her öğrenci eklediğimizde artan bir sayaç oluşturalım.
+```swift
+struct Class {
+    var name: String
+    static var classSize = 0
+
+    init(name: String) {
+        self.name = name
+        Class.classSize += 1
+    }
+}
+```
+Yukarıdaki struct'da oluşturduğumuz statik classSize yapısı; Class structının özelliği olduğu için şu şekilde okumamız gerekir.
+
+```swift
+print(Class.classSize)
+```
+Ve Class struct'ına her yeni eleman eklediğimizde classSize sayacımız 1 artacaktır.
+
+### 5. Access Control
+Access control, struct yapılarımızın içindeki özellik ve metodlarımızın doğrudan okunmasını sınırlandırmak için kullanılır. Bu önemlidir çünkü bir kişinin bu özellikleri doğrudan okumasını durdurabilirsiniz. Örneğin;
+
+```swift
+struct Password {
+    private var password: String
+
+    init(password: String) {
+        self.password = password
+    }
+    func identify() -> {
+        return "Şifreniz \(id)."
+    }
+}
+```
+Yukarıdaki kodda password değerine ulaşabileceğimiz tek yok identify methodunu çalıştırmak olacaktır.
