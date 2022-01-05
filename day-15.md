@@ -5,3 +5,5 @@ Bugün tekrar edeceğimiz konular;
 3. Access control
 4. Polymorphism and typecasting
 5. Closures
+
+Son olarak [şu linkte](https://www.hackingwithswift.com/files/100/15-wordsearch.pdf) bulacağınız bir pdf bulmaca var. Swift terimlerini aradığımız bir bulmaca. Çözmenizi tavsiye ediyorum.
